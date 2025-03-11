@@ -2,8 +2,7 @@
 
 ## Descrição
 
-Este projeto foca-se na previsão do Preço de Venda ao Público Sugerido pelo Fabricante (MSRP) de carros utilizando um modelo de regressão linear. A análise inclui exploração de dados, pré-processamento, engenharia de características, treino de modelo e avaliação. O projeto é implementado num script Python (`car_prediction.py`) concebido para funcionar de forma semelhante a um Jupyter Notebook.
-
+Este projeto foca-se na previsão do Preço de Venda ao Público Sugerido pelo Fabricante (MSRP) de carros utilizando um modelo de regressão linear. A análise inclui exploração de dados, pré-processamento, engenharia de características, treino de modelo e avaliação. O projeto é implementado num script Jupyter Notebook (`car_prediction.ipynb`).
 ## Instalação
 
 Este projeto requer as seguintes bibliotecas Python:
@@ -22,19 +21,16 @@ pip install pandas numpy scikit-learn seaborn matplotlib
 
 ### Conjunto de Dados
 
-Descarregue o ficheiro `data.csv`. O script assume que os dados estão localizados em `C:\Users\Raimu\PastaMain\Documentos\car_prediction_linear_sklearn\data.csv`. Certifique-se de que este caminho existe e é acessível, ou modifique o caminho do ficheiro dentro do script `car_prediction.py` para corresponder à localização do seu conjunto de dados.
+Descarregue o ficheiro `data.csv`. O script assume que os dados estão localizados em `C:\Users\Raimu\PastaMain\Documentos\car_prediction_linear_sklearn\data.csv`. Certifique-se de que este caminho existe e é acessível, ou modifique o caminho do ficheiro dentro do script `car_prediction.ipynb` para corresponder à localização do seu conjunto de dados.
 
 ## Utilização
 
-O script `car_prediction.py` executa todo o fluxo de trabalho. Está estruturado conceptualmente como um Jupyter Notebook, com "células" a executar tarefas específicas. Para executar o script:
+O script `car_prediction.ipynb` executa todo o fluxo de trabalho. Está estruturado conceptualmente como um Jupyter Notebook, com "células" a executar tarefas específicas. Para executar o script:
 
 1.  **Instalar Dependências:** Certifique-se de que todas as bibliotecas necessárias estão instaladas (ver "Instalação").
 2.  **Obter o Conjunto de Dados:** Descarregue `data.csv` e coloque-o no diretório correto (ou atualize o caminho do ficheiro no script).
-3.  **Executar o Script:** Execute o script Python a partir do seu terminal:
+3.  **Executar o Script:** Execute o script Python a partir da sua IDE :)
 
-    ```bash
-    python car_prediction.py
-    ```
 
 ## Guia Passo-a-Passo do Script e Saída Esperada
 
