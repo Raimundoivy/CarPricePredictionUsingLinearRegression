@@ -17,7 +17,7 @@ You can install these dependencies using pip:
 
 ```bash
 pip install pandas numpy scikit-learn seaborn matplotlib
-
+```
 
 It is also necessary to download the dataset and place it in a directory relative to your script location, in this case "C:\Users\Raimu\PastaMain\Documentos\car_prediction_linear_sklearn\data.csv". Ensure this path exists and is accessible or modify it to be your dataset path.
 
