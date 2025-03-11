@@ -1,11 +1,12 @@
-# Car Price Prediction with Linear Regression
+## Previsão de Preço de Carros com Regressão Linear
 
-## Description
+## Descrição
 
-This project focuses on predicting the Manufacturer's Suggested Retail Price (MSRP) of cars using a linear regression model. The analysis includes data exploration, preprocessing, feature engineering, model training, and evaluation. 
-## Installation
+Este projeto foca-se na previsão do Preço de Venda ao Público Sugerido pelo Fabricante (MSRP) de carros utilizando um modelo de regressão linear. A análise inclui exploração de dados, pré-processamento, engenharia de características, treino de modelo e avaliação. O projeto é implementado num script Python (`car_prediction.py`) concebido para funcionar de forma semelhante a um Jupyter Notebook.
 
-This project requires the following Python libraries:
+## Instalação
+
+Este projeto requer as seguintes bibliotecas Python:
 
 *   pandas
 *   numpy
@@ -13,76 +14,118 @@ This project requires the following Python libraries:
 *   seaborn
 *   matplotlib
 
-You can install these dependencies using pip:
+Instale estas dependências utilizando `pip`:
 
 ```bash
 pip install pandas numpy scikit-learn seaborn matplotlib
 ```
 
-It is also necessary to download the dataset and place it in a directory relative to your script location, in this case "C:\Users\Raimu\PastaMain\Documentos\car_prediction_linear_sklearn\data.csv". Ensure this path exists and is accessible or modify it to be your dataset path.
+### Conjunto de Dados
 
-Usage
+Descarregue o ficheiro `data.csv`. O script assume que os dados estão localizados em `C:\Users\Raimu\PastaMain\Documentos\car_prediction_linear_sklearn\data.csv`. Certifique-se de que este caminho existe e é acessível, ou modifique o caminho do ficheiro dentro do script `car_prediction.py` para corresponder à localização do seu conjunto de dados.
 
-The car_prediction.ipynb script performs the entire workflow, from data loading to model evaluation. Conceptually, the script is structured like a Jupyter Notebook, with "cells" of code performing specific tasks. To run the script and reproduce the analysis, follow these steps:
+## Utilização
 
-Ensure Dependencies are Installed: Make sure you have installed all the required libraries as described in the "Installation" section.
+O script `car_prediction.py` executa todo o fluxo de trabalho. Está estruturado conceptualmente como um Jupyter Notebook, com "células" a executar tarefas específicas. Para executar o script:
 
-Download the Dataset: Obtain the data.csv file. This file is assumed to be located at C:\Users\Raimu\PastaMain\Documentos\car_prediction_linear_sklearn\data.csv. If you place the file elsewhere, you must update the file path in the script.
+1.  **Instalar Dependências:** Certifique-se de que todas as bibliotecas necessárias estão instaladas (ver "Instalação").
+2.  **Obter o Conjunto de Dados:** Descarregue `data.csv` e coloque-o no diretório correto (ou atualize o caminho do ficheiro no script).
+3.  **Executar o Script:** Execute o script Python a partir do seu terminal:
 
-Run the Script: Execute the Notebook script from your IDE :)
+    ```bash
+    python car_prediction.py
+    ```
 
-python car_prediction.py
+## Guia Passo-a-Passo do Script e Saída Esperada
 
-Script Walkthrough and expected output:
+O script executa os seguintes passos, organizados conceptualmente como "células":
 
-Cell 1 & 2 (Import Libraries and Load Data): Imports necessary libraries (pandas, numpy, scikit-learn, seaborn, matplotlib) and loads the car dataset from the specified CSV file. Defines the columns to be used.
+**Células 1 e 2: Importar Bibliotecas e Carregar Dados**
 
-Cell 3 (Basic Data Overview): Prints the shape of the dataset, the first 5 rows, data types of each column, missing values, and descriptive statistics. This provides an initial understanding of the data.
+*   **Importações:** pandas, numpy, scikit-learn, seaborn, matplotlib.
+*   **Carrega:** O conjunto de dados de carros a partir do ficheiro CSV.
+*   **Define:** As colunas de características iniciais.
 
-Cell 4 & 5 (Univariate Analysis - MSRP): Visualizes the distribution of the target variable (MSRP) using a histogram and a Kernel Density Estimate (KDE) plot. A second plot is then generated showing the effect of log transformation on the distribution.
+**Célula 3: Visão Geral Básica dos Dados**
 
-Cell 6 (Univariate Analysis - Numerical Features): Creates histograms and KDE plots for numerical features like 'Year', 'Engine HP', 'Engine Cylinders', 'highway MPG', 'city mpg', and 'Popularity'.
+*   **Imprime:**
+    *   Formato do conjunto de dados (linhas, colunas).
+    *   Primeiras 5 linhas dos dados.
+    *   Tipos de dados de cada coluna.
+    *   Contagens de valores em falta por coluna.
+    *   Estatísticas descritivas (numéricas e categóricas).
 
-Cell 7 (Multivariate Analysis - Correlation): Generates a correlation heatmap to show the relationships between numerical features and MSRP.
+**Células 4 e 5: Análise Univariada - MSRP**
 
-Cells 8-10 (Data Preprocessing): Handles missing values using SimpleImputer (mean imputation for numerical features and most frequent imputation for categorical features) and performs one-hot encoding on categorical features.
+*   **Visualiza a distribuição do MSRP:**
+    *   Histograma e gráfico KDE do MSRP bruto.
+    *   Histograma e gráfico KDE do MSRP transformado em log (`np.log1p`).
 
-Cells 11-13 (Data Splitting): Splits the data into training and testing sets (80% train, 20% test) using train_test_split. Handles any discrepancies in columns between training and testing sets resulting from one-hot encoding.
+**Célula 6: Análise Univariada - Características Numéricas**
 
-Cells 14 & 15 (Model Training and Evaluation): Trains a Linear Regression model on the training data and evaluates its performance on the testing data. Prints Mean Squared Error (MSE), R-squared, and Mean Absolute Error (MAE).
+*   **Gera:** Histogramas e gráficos KDE para: `'Year'`, `'Engine HP'`, `'Engine Cylinders'`, `'highway MPG'`, `'city mpg'`, `'Popularity'`.
 
-Cell 16 (Actual vs. Predicted Distribution): Displays a histogram comparing the distribution of actual MSRP values with the predicted values. This visualization helps assess the model's performance.
+**Célula 7: Análise Multivariada - Correlação**
 
-Cell 17-19 (Feature Engineering & Retraining - 'Engine HP Squared'): Introduces a new feature, 'Engine HP Squared', to capture potential non-linear relationships. Then it retrains and re-evaluates the model, outputting MSE, R-squared, MAE, and the Actual vs Predicted plot. The new feature's effect on performance is shown. The .to_markdown() calls output formatted tables of the dataframe's head and info.
+*   **Cria:** Um mapa de calor de correlação (características numéricas vs. MSRP).
 
-Cell 20-22 (Feature Engineering & Retraining - Log & Ratio): Adds two new features: 'Engine HP Log' (logarithmic transformation of 'Engine HP') and 'Popularity per HP' (ratio of 'Popularity' to 'Engine HP'). The model is then retrained and re-evaluated, with results (MSE, R-squared, MAE, and Actual vs Predicted plot) printed. The .to_markdown() calls output formatted tables of the dataframe's head and info.
+**Células 8-10: Pré-processamento de Dados**
 
-The script will print various outputs to the console, including:
+*   **Trata valores em falta:**
+    *   Características numéricas: Imputação pela média.
+    *   Características categóricas: Imputação pelo valor mais frequente.
+*   **Executa:** Codificação one-hot em características categóricas.
 
-Dataframe shapes, head previews, data types, missing value counts, and descriptive statistics.
+**Células 11-13: Divisão de Dados**
 
-Evaluation metrics (MSE, R-squared, MAE) for the initial model and after each feature engineering step.
+*   **Divide os dados:** 80% treino, 20% teste (`train_test_split`).
+*   **Trata:** Potenciais discrepâncias de colunas (codificação one-hot).
 
-Formatted tables showing the dataframes after feature engineering.
+**Células 14 e 15: Treino e Avaliação do Modelo**
 
-Several plots will also be displayed showing:
+*   **Treina:** Um modelo `LinearRegression`.
+*   **Faz:** Previsões no conjunto de teste.
+*   **Avalia e imprime:**
+    *   Erro Quadrático Médio (MSE)
+    *   R-quadrado (R2)
+    *   Erro Absoluto Médio (MAE)
 
-Histograms of MSRP and numerical features.
+**Célula 16: Distribuição Real vs. Prevista**
 
-A correlation heatmap.
+*   **Exibe:** Um histograma: MSRP Real vs. MSRP Previsto.
 
-Histograms comparing actual and predicted MSRP distributions.
+**Células 17-19: Engenharia de Características e Retreino - 'Engine HP Squared'**
 
-Dependencies
+*   **Cria:** Característica `'Engine HP Squared'`.
+*   **Retreina e reavalia:** O modelo (imprime MSE, R-quadrado, MAE).
+*   **Exibe:** Histograma atualizado de MSRP real vs. previsto.
+*   **Imprime:** As primeiras 5 linhas e informações sobre as colunas do dataframe de treino atualizado.
 
-pandas
+**Células 20-22: Engenharia de Características e Retreino - Log e Rácio**
 
-numpy
+*   **Cria:** Características `'Engine HP Log'` (`log + 1`) e `'Popularity per HP'`.
+*   **Retreina e reavalia:** O modelo (imprime MSE, R-quadrado, MAE).
+*   **Exibe:** Histograma atualizado de MSRP real vs. previsto.
+*   **Imprime:** As primeiras 5 linhas e informações sobre as colunas do dataframe de treino atualizado.
 
-scikit-learn
+### Saída da Consola:
 
-seaborn
+*   Resumos do Dataframe (formato, cabeçalho, dtypes, valores em falta, describe).
+*   Métricas de avaliação (MSE, R-quadrado, MAE) para os modelos inicial e modificado.
+*   Tabela formatada representando as primeiras 5 linhas do dataframe atualizado, juntamente com informações sobre cada uma das colunas.
 
-matplotlib
+### Gráficos:
 
-(Specific version numbers were not tracked in the original notebook, but the latest versions available at the time of writing should work.)
+*   Histogramas: MSRP (bruto e transformado em log).
+*   Histogramas: Características numéricas individuais.
+*   Mapa de calor de correlação.
+*   Histogramas: MSRP Real vs. Previsto (inicial e após engenharia de características).
+
+## Dependências
+
+*   pandas
+*   numpy
+*   scikit-learn
+*   seaborn
+*   matplotlib
+    *   *(Versões específicas não foram rastreadas; versões recentes devem funcionar.)*
