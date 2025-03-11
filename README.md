@@ -2,8 +2,7 @@
 
 ## Description
 
-This project focuses on predicting the Manufacturer's Suggested Retail Price (MSRP) of cars using a linear regression model. The analysis includes data exploration, preprocessing, feature engineering, model training, and evaluation. The original Jupyter Notebook has been converted to a Python script (`car_prediction.py`).
-
+This project focuses on predicting the Manufacturer's Suggested Retail Price (MSRP) of cars using a linear regression model. The analysis includes data exploration, preprocessing, feature engineering, model training, and evaluation. 
 ## Installation
 
 This project requires the following Python libraries:
