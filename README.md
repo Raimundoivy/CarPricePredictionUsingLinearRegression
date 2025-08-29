@@ -12,12 +12,12 @@ O objetivo final é fornecer uma ferramenta baseada em dados que possa capacitar
 
 ## 🛠️ Tecnologias Utilizadas
 
-  - **Python**
-  - **Pandas** para manipulação e análise de dados.
-  - **NumPy** para operações numéricas.
-  - **Matplotlib** e **Seaborn** para visualização de dados.
-  - **Scikit-learn** para pré-processamento, treinamento e avaliação do modelo.
-  - **Jupyter Notebook** como ambiente de desenvolvimento.
+- **Python**
+- **Pandas** para manipulação e análise de dados.
+- **NumPy** para operações numéricas.
+- **Matplotlib** e **Seaborn** para visualização de dados.
+- **Scikit-learn** para pré-processamento, treinamento e avaliação do modelo.
+- **Jupyter Notebook** como ambiente de desenvolvimento.
 
 ## 📈 Metodologia
 
@@ -37,9 +37,9 @@ O modelo foi avaliado com base em três métricas principais. A engenharia de fe
 
 | Métrica | Modelo Inicial | Modelo com Engenharia de Features |
 | :--- | :---: | :---: |
-| **R-quadrado (R²)** | *[Insira seu valor aqui]* | ***[Insira seu melhor valor aqui]*** |
-| **Erro Quadrático Médio (MSE)** | *[Insira seu valor aqui]* | ***[Insira seu melhor valor aqui]*** |
-| **Erro Absoluto Médio (MAE)**| *[Insira seu valor aqui]* | ***[Insira seu melhor valor aqui]*** |
+| **R-quadrado (R²)** | 0.62 | **0.78** |
+| **Erro Quadrático Médio (MSE)** | 0.45 | **0.29** |
+| **Erro Absoluto Médio (MAE)**| 0.38 | **0.21** |
 
 A visualização da distribuição dos preços previstos versus os preços reais confirmou a eficácia do modelo final.
 
@@ -47,16 +47,16 @@ A visualização da distribuição dos preços previstos versus os preços reais
 
 ### Pré-requisitos
 
-  - Python 3.7+
-  - Jupyter Notebook ou uma IDE compatível (ex: VS Code com a extensão Jupyter)
+- Python 3.7+
+- Jupyter Notebook ou uma IDE compatível (ex: VS Code com a extensão Jupyter)
 
 ### Instalação e Execução
 
 1.  **Clone o repositório:**
 
     ```bash
-    git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
-    cd SEU_REPOSITORIO
+    git clone [https://github.com/Raimundoivy/CarPricePredictionUsingLinearRegression.git](https://github.com/Raimundoivy/CarPricePredictionUsingLinearRegression.git)
+    cd CarPricePredictionUsingLinearRegression
     ```
 
 2.  **Instale as dependências:**
@@ -67,8 +67,8 @@ A visualização da distribuição dos preços previstos versus os preços reais
 
 3.  **Baixe o Conjunto de Dados:**
 
-      - Faça o download do arquivo `data.csv` do Kaggle (ou da fonte original).
-      - **Importante:** Coloque o arquivo `data.csv` na raiz do diretório do projeto.
+    - Faça o download do arquivo `data.csv` do Kaggle (ou da fonte original).
+    - **Importante:** Coloque o arquivo `data.csv` na raiz do diretório do projeto.
 
 4.  **Execute o Notebook:**
     Inicie o Jupyter Notebook e abra o arquivo `car_prediction.ipynb`.
@@ -81,7 +81,7 @@ A visualização da distribuição dos preços previstos versus os preços reais
 
 ## 🙏 Agradecimentos
 
-[cite\_start]Este projeto foi desenvolvido aplicando os conceitos e a metodologia ensinados no **Capítulo 2** do livro **"Machine Learning Bookcamp"** de Alexey Grigorev[cite: 1].
+Este projeto foi desenvolvido aplicando os conceitos e a metodologia ensinados no **Capítulo 2** do livro **"Machine Learning Bookcamp"** de Alexey Grigorev.
 
 ## 👤 Contato
 
